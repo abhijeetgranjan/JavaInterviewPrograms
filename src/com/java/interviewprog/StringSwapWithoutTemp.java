@@ -11,7 +11,7 @@ public class StringSwapWithoutTemp {
         System.out.println("the first string is "+ first+" and second string is "+second+ " before swap ");
         first= first+second;
         second= first.substring(0,first.length()-second.length());
-        first= first.substring(second.length(),first.length());
+        first= first.substring(second.length());
         System.out.println("the first string is "+ first+" and second string is "+second+ " after swap ");
     }
 }
