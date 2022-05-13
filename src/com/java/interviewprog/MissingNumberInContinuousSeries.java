@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * WAP to find the missing number which from a series of continuous number
+ * WAP to find the missing number which from a series of continuous numbers
  * for example {1,2,3,4,6,7,8,9} is a series from which 5 is missing
  */
 
