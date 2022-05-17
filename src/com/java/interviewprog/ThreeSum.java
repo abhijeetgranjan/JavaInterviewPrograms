@@ -20,23 +20,19 @@ public class ThreeSum {
             if (value != null) {
                 System.out.println(" the triplets  are " + nums[i] + " and " + value[0] + " and " + value[1]);
             }
-
         }
     }
 
     public static int[] twoSum(int[] array, int target, int currentIndex) {
-        int[] indexes = new int[2];
         Set<Integer> mySet = new HashSet<>();
         for (int i = currentIndex+1; i < array.length; i++) {
             int missingNo = target - array[i];
             if (mySet.contains(missingNo)) {
-                indexes[0] = missingNo;
-                indexes[1] = array[i];
+                int[] indexes  = {missingNo,array[i]};
                 return indexes;
             } else {
                 mySet.add(array[i]);
             }
-
         }
         return null;
     }
