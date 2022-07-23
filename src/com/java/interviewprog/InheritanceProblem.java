@@ -24,7 +24,6 @@ class Second extends  InheritanceProblem{
 
 class  Main{
     public static void main(String[] args) {
-
         Second second = new Second();
         second.run();
         second.second();
