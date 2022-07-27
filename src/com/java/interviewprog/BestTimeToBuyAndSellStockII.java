@@ -14,7 +14,7 @@ public class BestTimeToBuyAndSellStockII {
         int best = bestTimeToBuy(array);
         System.out.println(best);
 
-        int[] array1 = {1,2,3,4,5};
+        int[] array1 = {10, 22, 5, 75, 65, 80};
         int best1 = bestTimeToBuy(array1);
         System.out.println(best1);
     }
