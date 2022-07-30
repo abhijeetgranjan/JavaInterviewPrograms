@@ -7,7 +7,6 @@ public class ArrayProblem012DutchFlagApproach {
         int array[] = {0, 0, 1, 1, 0, 1, 0, 2, 2};
         sortArrayOn012(array);
         System.out.println();
-
         int array1[] = {0, 0, 1, 1, 0, 1, 0, 2, 2, 0,1,2,0,1};
         sortArrayOn012(array1);
     }

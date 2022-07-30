@@ -12,7 +12,7 @@ import java.util.Set;
 public class ThreeSum {
     public static void main(String[] args) {
         int[] nums = new int[]{12, 3, 4, 1, 6, 9};
-        int target = 24;
+        int target = 19 ;
 
         for (int i = 0; i < nums.length; i++) {
             int currentTarget = target - nums[i];
