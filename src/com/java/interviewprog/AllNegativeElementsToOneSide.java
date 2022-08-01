@@ -8,7 +8,7 @@ public class AllNegativeElementsToOneSide {
         int[] array1 = {-1, -8, -9, 10, -2, 12, -12, -6, -19, -9 ,- 8};
         moveNegativeElementsToOneSide(array1);
         System.out.println();
-        int[] array2 = {-1, -8, -9, -10, -2, -12, -12, -6, -19, -9 ,- 8};
+        int[] array2 =  {-1, -8, -9, -10, -2, -12, -12, -6, -19, -9 ,- 8};
         moveNegativeElementsToOneSide(array2);
     }
 
