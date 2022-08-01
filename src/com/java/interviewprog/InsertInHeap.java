@@ -33,7 +33,7 @@ public class InsertInHeap {
         }
     }
 
-    private static void insertInHeap(int value) {
+    public static void insertInHeap(int value) {
 
         if (index > heapArray.length) {
             return;
