@@ -7,10 +7,10 @@ public class SumOfSquares {
 
         int[] array = {2, 3, 1, 4, 5, 6, 7, 8, 9, 10};
 
-        int reduce = Arrays.stream(array).map(n -> n * n).reduce(0, Integer::sum);
-        System.out.println(reduce);
+        int allNoSum = Arrays.stream(array).map(n -> n * n).reduce(0, Integer::sum);
+        System.out.println(allNoSum);
 
-        int reduce1 = Arrays.stream(array).filter(i->i%2==0).map(n -> n * n).reduce(0, Integer::sum);
-        System.out.println(reduce1);
+        int evenNoSum = Arrays.stream(array).filter(i->i%2==0).map(n -> n * n).reduce(0, Integer::sum);
+        System.out.println(evenNoSum);
     }
 }
