@@ -1,28 +1,26 @@
 package com.java.interviewprog.java8;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ListToMap {
     public static void main(String[] args) {
 
         List<Student> students = new ArrayList<>();
-        students.add(new Student(1,"abhijeet"));
-        students.add(new Student(2,"ranjan"));
+        students.add(new Student(1, "abhijeet"));
+        students.add(new Student(2, "ranjan"));
 
-        Map<Integer,String> hashmap = students.stream().collect(Collectors.toMap(Student::getId,Student::getName));
+        Map<Integer, String> hashmap = students.stream().collect(Collectors.toMap(Student::getId, Student::getName));
 
-        for (Map.Entry<Integer,String> integerStringMap :hashmap.entrySet()){
-            System.out.println(" the id is " +integerStringMap.getKey() +" and the value is "+integerStringMap.getValue());
+        for (Map.Entry<Integer, String> integerStringMap : hashmap.entrySet()) {
+            System.out.println(" the id is " + integerStringMap.getKey() + " and the value is " + integerStringMap.getValue());
         }
     }
 }
 
 
-class  Student{
-    private  int id;
+class Student {
+    private int id;
     private String name;
 
     public Student(int id, String name) {
