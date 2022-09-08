@@ -11,13 +11,13 @@ public class StringReversal {
         reverseString(next);
     }
 
-    private static void reverseString(String reverse) {
+    public static String reverseString(String reverse) {
         String reversedString = "";
         for (int i = reverse.length() - 1; i >= 0; i--) {
             char c = reverse.charAt(i);
             reversedString = reversedString + c;
         }
         System.out.println(" the reversed String is " + reversedString);
-
+        return  reversedString;
     }
 }
