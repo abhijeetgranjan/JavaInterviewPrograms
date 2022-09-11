@@ -1,6 +1,9 @@
 package com.java.interviewprog.java8;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class SortListUsingLambda {
     public static void main(String[] args) {
@@ -9,5 +12,4 @@ public class SortListUsingLambda {
         Collections.sort(integerArrayList, comparator);
         integerArrayList.stream().forEach(System.out::println);
     }
-
 }
