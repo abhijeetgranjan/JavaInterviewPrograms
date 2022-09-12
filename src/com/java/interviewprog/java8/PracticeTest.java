@@ -1,49 +1,37 @@
 package com.java.interviewprog.java8;
 
-public class PracticeTest extends Thread {
+import java.util.*;
+import java.util.stream.Collectors;
 
-    public void run(){
-        System.out.println("child thread started");
-        for (int i = 0; i < 10; i++) {
-            System.out.println(i);
-        }
-    }
-
-    public void print(){
-        System.out.println("print called");
-    }
-
-
-    public void demo() {
-        System.out.println("over ridden demo");
-    }
-
-
+public class PracticeTest {
     public static void main(String[] args) {
-        /*System.out.println(currentThread().getName());
-        System.out.println(Thread.currentThread().getThreadGroup().getName());
-        PracticeTest t = new PracticeTest();
-        t.print();
-        System.out.println(t.getName());
-        System.out.println(activeCount());*/
 
-        PracticeTest practiceTest = new PracticeTest();
-        practiceTest.demo();
-        Interf.staticMethod();
+        Map<Integer, String> integerStringMap = new HashMap<>();
+        integerStringMap.put(1, "abhi");
+        integerStringMap.put(2, "qwer");
+        integerStringMap.put(3, "ty");
+        integerStringMap.put(4, "poi");
 
+
+        //  (integerStringMap.keySet()).forEach(System.out::println);
+
+        List<String> collect = integerStringMap.keySet().stream().map(m-> integerStringMap.get(m)).collect(Collectors.toList());
+        //collect.forEach(System.out::println);
+
+        List<List<String>> lists = new ArrayList<>();
+        lists.add(collect);
+        List<String> names = Arrays.asList("samsung", "nokia", "vivo", "micromaxx");
+        lists.add(names);
+        lists.forEach(System.out::println);
+
+
+        List<String> collect1 = lists.stream().flatMap(m -> m.stream().map(i -> i.toUpperCase())).collect(Collectors.toList());
+        collect1.forEach(System.out::println);
+
+        lists.stream().flatMap(m->m.stream()).collect(Collectors.toList()).forEach(System.out::print);
     }
 }
 
 
-interface Interf{
-
-    public default void demo(){
-        System.out.println(" default method of interface");
-    }
-
-    static void staticMethod(){
-        System.out.println(" static method of interface");
-    }
 
 
-}
