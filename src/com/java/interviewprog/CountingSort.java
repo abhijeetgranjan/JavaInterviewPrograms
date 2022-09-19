@@ -1,15 +1,16 @@
-package com.java.interviewprog.java8;
+package com.java.interviewprog;
 
 import java.util.Arrays;
 import java.util.OptionalInt;
 
-public class PracticeTest {
+public class CountingSort {
+
     public static void main(String[] args) {
         int[] array = {0, 1, 2, 0, 0, 1, 2, 1, 1, 2};
-          countingSortImpl(array, Arrays.stream(array).min(), Arrays.stream(array).max());
+        countingSortImpl(array, Arrays.stream(array).min(), Arrays.stream(array).max());
 
         System.out.println();
-        int[] array1 = {1, 2, 8, 8,9, 5, 6};
+        int[] array1 = {1, 2, 8, 8,9, 5, 6,7};
         countingSortImpl(array1, Arrays.stream(array1).min(), Arrays.stream(array1).max());
     }
 
@@ -33,32 +34,4 @@ public class PracticeTest {
 
     }
 
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
