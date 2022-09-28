@@ -1,53 +1,40 @@
 package com.java.interviewprog.java8;
 
-import java.util.Arrays;
-import java.util.OptionalInt;
+import java.util.HashMap;
+import java.util.Map;
 
-public class PracticeTest {
-    public static void main(String[] args) {
-        int[] array = {0, 1, 2, 0, 0, 1, 2, 1, 1, 2};
-          countingSortImpl(array, Arrays.stream(array).min(), Arrays.stream(array).max());
+public final class PracticeTest {
+    private  final int eid;
+    private final String ename;
+    private final HashMap<Integer,String> edetail ;
 
-        System.out.println();
-        int[] array1 = {1, 2, 8, 8,9, 5, 6};
-        countingSortImpl(array1, Arrays.stream(array1).min(), Arrays.stream(array1).max());
+
+    public PracticeTest(int eid, String ename, HashMap<Integer, String> edetail) {
+        this.eid = eid;
+        this.ename = ename;
+       HashMap<Integer,String> temp = new HashMap<>();
+       for(Map.Entry<Integer,String> entry: edetail.entrySet()){
+           temp.put(entry.getKey(),entry.getValue());
+       }
+        this.edetail = temp;
     }
 
-    private static void countingSortImpl(int[] array, OptionalInt min, OptionalInt max) {
-        int[] tempArray = new int[max.getAsInt() + 1];
-        int[] output = new int[max.getAsInt() + 1];
-        for (int i : array) {
-            tempArray[i]++;
-        }
-
-
-        int j = 0;
-        for (int i = min.getAsInt(); i <= max.getAsInt(); i++) {
-            while (tempArray[i] > 0) {
-                array[j] = i;
-                tempArray[i]--;
-                j++;
-            }
-        }
-        Arrays.stream(array).forEach(i -> System.out.print(i+" "));
-
+    public int getEid() {
+        return eid;
     }
 
+    public String getEname() {
+        return ename;
+    }
 
+    public HashMap<Integer, String> getEdetail() {
+        HashMap<Integer,String> temp = new HashMap<>();
+        for(Map.Entry<Integer,String> entry: edetail.entrySet()){
+            temp.put(entry.getKey(),entry.getValue());
+        }
+       return temp;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
