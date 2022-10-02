@@ -1,40 +1,50 @@
 package com.java.interviewprog.java8;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.concurrent.*;
 
-public final class PracticeTest {
-    private  final int eid;
-    private final String ename;
-    private final HashMap<Integer,String> edetail ;
+public class PracticeTest {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
 
 
-    public PracticeTest(int eid, String ename, HashMap<Integer, String> edetail) {
-        this.eid = eid;
-        this.ename = ename;
-       HashMap<Integer,String> temp = new HashMap<>();
-       for(Map.Entry<Integer,String> entry: edetail.entrySet()){
-           temp.put(entry.getKey(),entry.getValue());
-       }
-        this.edetail = temp;
-    }
+        MyCallable[] callables = new MyCallable[]{new MyCallable(1), new MyCallable(10)};
 
-    public int getEid() {
-        return eid;
-    }
+        ExecutorService service = Executors.newFixedThreadPool(1);
 
-    public String getEname() {
-        return ename;
-    }
-
-    public HashMap<Integer, String> getEdetail() {
-        HashMap<Integer,String> temp = new HashMap<>();
-        for(Map.Entry<Integer,String> entry: edetail.entrySet()){
-            temp.put(entry.getKey(),entry.getValue());
+        for (MyCallable myCallable : callables) {
+            Future submit = service.submit(myCallable);
+            System.out.println(submit.get());
         }
-       return temp;
+
+
+        CompletableFuture<String> whatsYourNameFuture = CompletableFuture.supplyAsync(() -> "amit").thenApply((name) -> {
+            return "hello " + name;
+        });
+
+        CompletableFuture<String> stringCompletableFuture = whatsYourNameFuture.thenApply((name) -> "hello " + name);
+
+        System.out.println(whatsYourNameFuture.get());
+
+
+        service.shutdown();
+    }
+
+}
+
+
+class MyCallable implements Callable {
+
+    int i;
+
+    public MyCallable(int i) {
+        this.i = i;
+    }
+
+    @Override
+    public Object call() throws Exception {
+        return i + 10;
     }
 }
+
 
 
 
