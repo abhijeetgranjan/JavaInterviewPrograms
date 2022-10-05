@@ -1,18 +1,12 @@
 package com.java.interviewprog;
 
 public class Heapify {
-   static  int[] array = new int [10];
+   static  int[] array = new int[] {5,3,17,10,84,19,6,22,9};
     static int size=0;
     public static void main(String[] args) {
-        insert(5);
-        insert(3);
-        insert(17);
-        insert(10);
-        insert(84);
-        insert(19);
-        insert(6);
-        insert(22);
-        insert(9);
+        for (int i = 0; i < array.length-1 ; i++) {
+            insert(array[i]);
+        }
 
         for(int i=0; i <size; i++){
             System.out.print(array[i]);
@@ -21,7 +15,6 @@ public class Heapify {
     }
 
     private static void insert(int i) {
-//5 3 17 10 84 19 6 22 9
         if (size == array.length) {
             System.out.println(" can't insert any more elements");
             return;
