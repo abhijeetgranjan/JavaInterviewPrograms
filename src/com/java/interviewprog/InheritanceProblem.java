@@ -7,7 +7,7 @@ public class InheritanceProblem {
         System.out.println(" InheritanceProblem class run called");
     }
     void test(){
-        System.out.println(" test from second class");
+        System.out.println(" test from InheritanceProblem class");
     }
 }
 
