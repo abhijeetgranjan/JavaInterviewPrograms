@@ -2,7 +2,7 @@ package com.java.interviewprog;
 
 public class OutputProgram {
     public static void main(String[] args) {
-        display(null); // will call the primitive  so display with string argument called would be output  and error in
+        display(null); // will call the reference type  so display with string argument called would be output  and error in
         //case display(Integer s) is also there
     }
 
