@@ -11,6 +11,7 @@ public class ArrayProblem012DutchFlagApproach {
         sortArrayOn012(array1);
     }
 
+
     private static void sortArrayOn012(int[] array) {
         int low = 0, mid = 0, high = array.length - 1;
         int temp;
