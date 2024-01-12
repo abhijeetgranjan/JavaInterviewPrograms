@@ -6,7 +6,7 @@ public class CallableWithFuture {
     public static void main(String[] args) throws ExecutionException, InterruptedException, TimeoutException {
 
 
-        ExecutorService service = Executors.newSingleThreadExecutor();
+       /* ExecutorService service = Executors.newSingleThreadExecutor();
         Future submit = service.submit(new MyCallables());
 
         if (submit.isDone()) {
@@ -17,7 +17,16 @@ public class CallableWithFuture {
 
         System.out.println(submit.get(10, TimeUnit.MILLISECONDS));
 
-        service.shutdown();
+        service.shutdown();*/
+
+        FutureTask f = new FutureTask<>(new MyCallables());
+        Thread t = new Thread(f);
+        t.start();
+        System.out.println(f.get());
+
+
+
+
     }
 }
 

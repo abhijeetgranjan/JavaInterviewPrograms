@@ -32,6 +32,9 @@ public class MapIteration {
         System.out.println("********************2nd approach*************");
         for (Map.Entry<Integer, String> entry : myHashMap.entrySet()) {
             System.out.println(" the key is " + entry.getKey() + " and the value is " + entry.getValue());
+
+
+
         }
 
         //3rd approach

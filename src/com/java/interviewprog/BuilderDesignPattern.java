@@ -4,9 +4,9 @@ import java.util.Date;
 
 public class BuilderDesignPattern {
 
-    private final int roll, regNo;
-    private final String name, parentName, city;
-    private final Date admissionYear;
+    private  int roll, regNo;
+    private  String name, parentName, city;
+    private  Date admissionYear;
 
 
     private BuilderDesignPattern(Builder builder){
