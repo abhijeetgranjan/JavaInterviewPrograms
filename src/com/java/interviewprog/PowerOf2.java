@@ -1,9 +1,11 @@
 package com.java.interviewprog;
 
+import java.util.Scanner;
+
 public class PowerOf2 {
     public static void main(String[] args) {
 
-        int n = 1;
+        int n = new Scanner(System.in).nextInt();
         int number = n;
         while (n % 2 == 0) {
             n = n / 2;
