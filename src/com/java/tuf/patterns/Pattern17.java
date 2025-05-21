@@ -38,6 +38,8 @@ public class Pattern17 {
     public static void main(String[] args) {
         Pattern17 pattern17 = new Pattern17();
         pattern17.printPattern(4);
+        System.out.println("****************");
+        pattern17.printPattern(5);
     }
 
 }
