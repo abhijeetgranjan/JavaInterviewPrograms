@@ -24,8 +24,7 @@ public class MaxOfAnArray {
         System.out.println(maxOfAnArray.maxArrray(0, array));
 
         int[] array1 = new int[]{50, 49, 3, 1, 66, 1000};
-        MaxOfAnArray maxOfAnArray1 = new MaxOfAnArray();
-        System.out.println(maxOfAnArray1.maxArrray(0, array1));
+        System.out.println(maxOfAnArray.maxArrray(0, array1));
     }
 
 }
